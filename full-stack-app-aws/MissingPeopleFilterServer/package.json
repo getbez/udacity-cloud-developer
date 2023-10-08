@@ -1,0 +1,35 @@
+{
+  "name": "fbi_missing_people_server",
+  "version": "1.0.0",
+  "description": "You have been hired as a software engineer to develop an application that will help the FBI find missing people.  The application will upload images to the FBI cloud database hosted in AWS. This will allow the FBI to run facial recognition software on the images to detect a match. You will be developing a NodeJS server and deploying it on AWS Elastic Beanstalk.  You will build upon the application we've developed during the lessons in this course. You'll complete a REST API endpoint in a backend service that processes incoming image URLs.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js",
+    "dev": "node src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.325.0",
+    "@aws-sdk/client-secrets-manager": "^3.338.0",
+    "@cosva-lab/aws-xray-sdk-prisma": "^3.5.2",
+    "argon2": "^0.28.7",
+    "aws-xray-sdk": "^3.5.0",
+    "axios": "1.6.0",
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jimp": "^0.16.2",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "@prisma/client": "^5.5.2",
+    "cors": "^2.8.5",
+    "prisma": "^5.5.2"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  }
+}
